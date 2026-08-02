@@ -22,7 +22,7 @@ function Dashboard() {
 
   useEffect(() => {
     const user = getUser();
-    if (user?.name) setFirstName(user.name.split(" ")[0]);
+    if (user?.name) setFirstName(user.name.split(" ")[0] ?? "friend");
   }, []);
 
   return (

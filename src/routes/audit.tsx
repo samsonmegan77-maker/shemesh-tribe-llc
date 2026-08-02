@@ -45,7 +45,7 @@ function AuditPage() {
 
   if (done) return <Results answers={answers} onRestart={() => { setAnswers([]); setStep(0); }} />;
 
-  const question = auditQuestions[step];
+  const question = auditQuestions[step]!;
 
   return (
     <div className="min-h-screen bg-background">
@@ -107,7 +107,7 @@ function Results({ answers, onRestart }: { answers: number[]; onRestart: () => v
   const overall = Math.round(
     (answers.reduce((a, b) => a + (b ?? 0), 0) / (auditQuestions.length * 3)) * 100,
   );
-  const biggest = [...scores].sort((a, b) => b.sum - a.sum)[0];
+  const biggest = [...scores].sort((a, b) => b.sum - a.sum)[0]!;
   const actions = recommendations[biggest.category];
 
   function download() {

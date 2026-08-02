@@ -25,7 +25,7 @@ function LoginPage() {
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!email || !password) return setError("Please enter your email and password.");
-    const name = email.split("@")[0].replace(/[._-]/g, " ");
+    const name = (email.split("@")[0] ?? "friend").replace(/[._-]/g, " ");
     setUser({ name: name.charAt(0).toUpperCase() + name.slice(1), email });
     navigate({ to: "/dashboard" });
   }
