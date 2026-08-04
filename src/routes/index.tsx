@@ -39,7 +39,10 @@ function Landing() {
 
       <section className="bg-primary px-4 py-12 text-primary-foreground sm:py-16">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl leading-tight font-bold sm:text-5xl">
+          <span className="inline-flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold-soft px-3 py-1 text-xs font-semibold text-gold sm:text-sm">
+            🇿🇦 Made for South Africa
+          </span>
+          <h1 className="mt-5 text-3xl leading-tight font-bold sm:text-5xl">
             Everything you need, in one place
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-base text-primary-foreground/80 sm:text-lg">
@@ -47,9 +50,12 @@ function Landing() {
           </p>
 
           <div className="mx-auto mt-8 flex max-w-sm flex-col gap-3">
-            <Button asChild size="lg" className="h-12 bg-gold text-gold-foreground hover:bg-gold/90">
+            <Button asChild size="lg" className="h-14 w-full text-base bg-gold text-gold-foreground hover:bg-gold/90">
               <Link to="/audit">Take Free Overload Audit</Link>
             </Button>
+            <p className="text-sm text-primary-foreground/70">
+              Takes less than 5 minutes. No payment required.
+            </p>
             <div className="grid grid-cols-2 gap-3">
               <Button
                 asChild
@@ -57,7 +63,7 @@ function Landing() {
                 variant="outline"
                 className="h-12 border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
               >
-                <Link to="/register">Register</Link>
+                <Link to="/register">Create free account</Link>
               </Button>
               <Button
                 asChild
@@ -80,6 +86,7 @@ function Landing() {
           </ul>
         </div>
       </section>
+
 
       <section className="mx-auto max-w-5xl px-4 py-10 sm:py-14">
         <h2 className="text-2xl font-bold sm:text-3xl">Explore the 12 sections</h2>

@@ -37,13 +37,13 @@ function RegisterPage() {
   return (
     <AuthShell title="Create your account" subtitle="It takes less than a minute.">
       <form onSubmit={onSubmit} className="space-y-4">
-        <Field label="Full Name" value={name} onChange={setName} placeholder="Thandi Mokoena" />
+        <Field label="Full name" value={name} onChange={setName} placeholder="Thandi Mokoena" />
         <Field label="Email" type="email" value={email} onChange={setEmail} placeholder="you@email.com" />
         <Field label="Password" type="password" value={password} onChange={setPassword} />
-        <Field label="Confirm Password" type="password" value={confirm} onChange={setConfirm} />
+        <Field label="Confirm password" type="password" value={confirm} onChange={setConfirm} />
         {error && <p className="text-sm font-medium text-destructive">{error}</p>}
-        <Button type="submit" size="lg" className="h-12 w-full bg-gold text-gold-foreground hover:bg-gold/90">
-          Create Account
+        <Button type="submit" size="lg" className="h-14 w-full text-base bg-gold text-gold-foreground hover:bg-gold/90">
+          Create free account
         </Button>
       </form>
       <p className="mt-6 text-center text-sm text-muted-foreground">
@@ -53,6 +53,7 @@ function RegisterPage() {
         </Link>
       </p>
     </AuthShell>
+
   );
 }
 

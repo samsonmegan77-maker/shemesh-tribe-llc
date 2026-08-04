@@ -44,11 +44,20 @@ function SectionPage() {
       </header>
 
       <main className="mx-auto max-w-3xl px-4 py-8">
-        <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gold-soft text-gold">
+        <Link
+          to="/audit"
+          className="flex items-center justify-between gap-3 rounded-2xl bg-gold px-5 py-4 text-gold-foreground shadow-card transition-opacity hover:opacity-90"
+        >
+          <span className="text-sm font-bold sm:text-base">Take Free Overload Audit</span>
+          <span className="text-xs opacity-80">Free · 5 min</span>
+        </Link>
+
+        <span className="mt-8 grid h-12 w-12 place-items-center rounded-2xl bg-gold-soft text-gold">
           <Icon className="h-6 w-6" />
         </span>
         <h1 className="mt-4 text-2xl font-bold sm:text-3xl">{section.name}</h1>
         <p className="mt-3 text-base leading-relaxed text-muted-foreground">{section.description}</p>
+
 
         <div className="mt-6 rounded-2xl border border-gold/30 bg-gold-soft p-5">
           <h2 className="text-lg font-bold">Start here — free</h2>
