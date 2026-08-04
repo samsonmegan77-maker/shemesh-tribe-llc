@@ -59,6 +59,11 @@ function AuditPage() {
       </header>
 
       <main className="mx-auto max-w-2xl px-4 py-8">
+        {step === 0 && (
+          <p className="mb-6 rounded-2xl border border-gold/30 bg-gold-soft p-4 text-base leading-relaxed">
+            Answer 20 quick questions to see your Load Score and get 5 practical actions.
+          </p>
+        )}
         <p className="text-sm font-semibold text-gold">{question.category}</p>
         <div className="mt-2 flex items-center gap-3">
           <Progress value={((step + 1) / total) * 100} className="h-2" />
@@ -68,6 +73,7 @@ function AuditPage() {
         </div>
 
         <h1 className="mt-8 text-2xl leading-snug font-bold sm:text-3xl">{question.text}</h1>
+
 
         <div className="mt-6 space-y-3">
           {answerOptions.map((option) => (

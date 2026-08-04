@@ -36,7 +36,7 @@ function LoginPage() {
         <Field label="Email" type="email" value={email} onChange={setEmail} placeholder="you@email.com" />
         <Field label="Password" type="password" value={password} onChange={setPassword} />
         {error && <p className="text-sm font-medium text-destructive">{error}</p>}
-        <Button type="submit" size="lg" className="h-12 w-full bg-gold text-gold-foreground hover:bg-gold/90">
+        <Button type="submit" size="lg" className="h-14 w-full text-base bg-gold text-gold-foreground hover:bg-gold/90">
           Login
         </Button>
       </form>
@@ -46,11 +46,12 @@ function LoginPage() {
         </button>
       </p>
       <p className="mt-6 text-center text-sm text-muted-foreground">
-        New here?{" "}
+        Don&apos;t have an account?{" "}
         <Link to="/register" className="font-semibold text-gold">
           Register
         </Link>
       </p>
+
     </AuthShell>
   );
 }
