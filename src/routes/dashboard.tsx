@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/shemesh/SiteFooter";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { TopNav } from "@/components/shemesh/TopNav";
@@ -47,6 +48,8 @@ function Dashboard() {
           <SectionGrid />
         </div>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

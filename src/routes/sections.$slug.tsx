@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/shemesh/SiteFooter";
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/shemesh/Logo";
@@ -89,6 +90,8 @@ function SectionPage() {
           ))}
         </div>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/shemesh/SiteFooter";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Logo } from "@/components/shemesh/Logo";
@@ -200,6 +201,8 @@ function Results({ answers, onRestart }: { answers: number[]; onRestart: () => v
           </Button>
         </div>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }
