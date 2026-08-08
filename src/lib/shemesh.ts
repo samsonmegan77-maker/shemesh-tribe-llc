@@ -188,7 +188,7 @@ export const recommendations: Record<AuditCategory, string[]> = {
   ],
 };
 
-// Simple demo-only user storage (public demonstration app, no real accounts).
+// Local account storage for this build (no third-party credentials involved).
 export type DemoUser = { name: string; email: string };
 
 const KEY = "shemesh_user";

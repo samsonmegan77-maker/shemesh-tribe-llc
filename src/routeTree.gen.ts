@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as DashboardRouteImport } from './routes/dashboard'
 import { Route as LoginRouteImport } from './routes/login'
+import { Route as PrivacyTermsRouteImport } from './routes/privacy-terms'
 import { Route as ProfileRouteImport } from './routes/profile'
 import { Route as RegisterRouteImport } from './routes/register'
 import { Route as SectionsSlugRouteImport } from './routes/sections.$slug'
@@ -37,6 +38,11 @@ const LoginRoute = LoginRouteImport.update({
   path: '/login',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PrivacyTermsRoute = PrivacyTermsRouteImport.update({
+  id: '/privacy-terms',
+  path: '/privacy-terms',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProfileRoute = ProfileRouteImport.update({
   id: '/profile',
   path: '/profile',
@@ -58,6 +64,7 @@ export interface FileRoutesByFullPath {
   '/audit': typeof AuditRoute
   '/dashboard': typeof DashboardRoute
   '/login': typeof LoginRoute
+  '/privacy-terms': typeof PrivacyTermsRoute
   '/profile': typeof ProfileRoute
   '/register': typeof RegisterRoute
   '/sections/$slug': typeof SectionsSlugRoute
@@ -67,6 +74,7 @@ export interface FileRoutesByTo {
   '/audit': typeof AuditRoute
   '/dashboard': typeof DashboardRoute
   '/login': typeof LoginRoute
+  '/privacy-terms': typeof PrivacyTermsRoute
   '/profile': typeof ProfileRoute
   '/register': typeof RegisterRoute
   '/sections/$slug': typeof SectionsSlugRoute
@@ -77,6 +85,7 @@ export interface FileRoutesById {
   '/audit': typeof AuditRoute
   '/dashboard': typeof DashboardRoute
   '/login': typeof LoginRoute
+  '/privacy-terms': typeof PrivacyTermsRoute
   '/profile': typeof ProfileRoute
   '/register': typeof RegisterRoute
   '/sections/$slug': typeof SectionsSlugRoute
@@ -88,6 +97,7 @@ export interface FileRouteTypes {
     | '/audit'
     | '/dashboard'
     | '/login'
+    | '/privacy-terms'
     | '/profile'
     | '/register'
     | '/sections/$slug'
@@ -97,6 +107,7 @@ export interface FileRouteTypes {
     | '/audit'
     | '/dashboard'
     | '/login'
+    | '/privacy-terms'
     | '/profile'
     | '/register'
     | '/sections/$slug'
@@ -106,6 +117,7 @@ export interface FileRouteTypes {
     | '/audit'
     | '/dashboard'
     | '/login'
+    | '/privacy-terms'
     | '/profile'
     | '/register'
     | '/sections/$slug'
@@ -116,6 +128,7 @@ export interface RootRouteChildren {
   AuditRoute: typeof AuditRoute
   DashboardRoute: typeof DashboardRoute
   LoginRoute: typeof LoginRoute
+  PrivacyTermsRoute: typeof PrivacyTermsRoute
   ProfileRoute: typeof ProfileRoute
   RegisterRoute: typeof RegisterRoute
   SectionsSlugRoute: typeof SectionsSlugRoute
@@ -151,6 +164,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LoginRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/privacy-terms': {
+      id: '/privacy-terms'
+      path: '/privacy-terms'
+      fullPath: '/privacy-terms'
+      preLoaderRoute: typeof PrivacyTermsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/profile': {
       id: '/profile'
       path: '/profile'
@@ -180,6 +200,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuditRoute: AuditRoute,
   DashboardRoute: DashboardRoute,
   LoginRoute: LoginRoute,
+  PrivacyTermsRoute: PrivacyTermsRoute,
   ProfileRoute: ProfileRoute,
   RegisterRoute: RegisterRoute,
   SectionsSlugRoute: SectionsSlugRoute,
