@@ -1,3 +1,4 @@
+import { SiteFooter } from "@/components/shemesh/SiteFooter";
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { TopNav } from "@/components/shemesh/TopNav";
@@ -58,6 +59,8 @@ function ProfilePage() {
           </Button>
         </div>
       </main>
+
+      <SiteFooter />
     </div>
   );
 }

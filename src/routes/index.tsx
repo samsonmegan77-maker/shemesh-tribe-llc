@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Logo } from "@/components/shemesh/Logo";
 import { SectionGrid } from "@/components/shemesh/SectionGrid";
+import { SiteFooter } from "@/components/shemesh/SiteFooter";
+
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 
@@ -96,9 +98,8 @@ function Landing() {
         </div>
       </section>
 
-      <footer className="border-t border-border px-4 py-8 text-center text-sm text-muted-foreground">
-        SheMesh — a public demonstration
-      </footer>
+      <SiteFooter />
+
     </div>
   );
 }
