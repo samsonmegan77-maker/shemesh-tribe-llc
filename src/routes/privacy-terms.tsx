@@ -9,12 +9,12 @@ export const Route = createFileRoute("/privacy-terms")({
       {
         name: "description",
         content:
-          "Privacy, terms of use and intellectual property protection for SheMesh Tribe LLC and the Overload Audit™.",
+          "Privacy, terms of use and public-facing intellectual property boundaries for SheMesh Tribe LLC.",
       },
       { property: "og:title", content: "Privacy & Terms — SheMesh Tribe LLC" },
       {
         property: "og:description",
-        content: "How SheMesh handles your information and protects its systems and Overload Audit™ logic.",
+        content: "How SheMesh handles information and separates its public interface from protected material.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -51,39 +51,57 @@ function PrivacyTerms() {
         </p>
 
         <div className="mt-8 space-y-4">
-          <Block title="Intellectual property protection">
+          <Block title="Public-facing boundary">
             <p className="font-semibold text-foreground">
-              Unauthorized data scraping, structural reverse-engineering, automated extraction, or mimicking of the
-              SheMesh Tribe LLC architecture, systems, and Overload Audit™ logic is strictly prohibited and subject to
-              legal action under South African intellectual property and cybercrimes frameworks.
+              This public application is a user-facing interface. Protected algorithms, confidential methods, trade
+              secrets, private datasets, credentials, unpublished technical designs and other non-public material are
+              not intentionally disclosed through this public surface.
+            </p>
+          </Block>
+
+          <Block title="Intellectual property">
+            <p>
+              Public visibility does not place SheMesh material in the public domain, waive intellectual-property
+              rights, or grant a general licence to reproduce protected works.
+            </p>
+            <p>
+              Some original systems, methods, designs, written works and other protected material may be created and
+              owned by their individual creator(s) and may be made available to SheMesh Tribe LLC under separate
+              licensing arrangements. This page is not itself a licence or assignment of those rights.
+            </p>
+            <p>
+              Users must not attempt to extract, reconstruct or reproduce protected non-public implementation,
+              confidential methodology or trade secrets through automated extraction, reverse engineering or other
+              unauthorized means.
             </p>
           </Block>
 
           <Block title="Your information">
             <p>
-              We only collect the information you choose to give us, and we use it to give you a better experience on
-              SheMesh. We do not sell your personal information.
+              We only collect the information you choose to give us, and we use it to provide the relevant SheMesh
+              experience. We do not sell your personal information.
             </p>
             <p>
-              Information you submit through forms and the Overload Audit™ is stored securely and is not made public.
+              Information you submit through forms or account features is not intentionally published as part of the
+              public repository or public interface.
             </p>
           </Block>
 
           <Block title="Using SheMesh">
             <p>
               SheMesh is provided for personal and community use. You agree not to use automated tools, bots or
-              crawlers to copy, harvest or republish any part of the platform or its content.
+              crawlers to copy, harvest or republish protected or non-public material.
             </p>
             <p>
-              The SheMesh name, logo, design, section structure and Overload Audit™ scoring method remain the property
-              of SheMesh Tribe LLC.
+              Public-facing content may be viewed and shared through the normal public interface. Separate permissions
+              or licences may apply to protected works and commercial uses.
             </p>
           </Block>
 
           <Block title="Contact">
             <p>
-              For questions about these terms, or to request removal of your information, please contact SheMesh Tribe
-              LLC.
+              For questions about these terms, intellectual-property permissions, or requests concerning your
+              information, please contact SheMesh Tribe LLC.
             </p>
           </Block>
         </div>
